@@ -43,9 +43,9 @@ export class IoTAlarmsConstruct extends Construct {
     const highTempAlarm = new cloudwatch.Alarm(this, "HighTemperatureAlarm", {
       alarmName: createResourceName("high-temperature-alarm", stage),
       alarmDescription:
-        "温度センサーが 80°C を超えました（デバイス過熱の可能性）",
+        "温度センサーが 40°C を超えました（デバイス過熱の可能性）",
       metric: metrics.deviceTemperatureForAlarm,
-      threshold: 80,
+      threshold: 40,
       comparisonOperator: cloudwatch.ComparisonOperator.GREATER_THAN_THRESHOLD,
       evaluationPeriods: 1,
       treatMissingData: cloudwatch.TreatMissingData.NOT_BREACHING,

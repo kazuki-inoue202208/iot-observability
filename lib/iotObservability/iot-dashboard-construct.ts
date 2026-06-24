@@ -84,7 +84,7 @@ export class IoTDashboardConstruct extends Construct {
         height: 6,
         left: [metrics.deviceTemperatureSearch],
         leftAnnotations: [
-          { value: 80, label: "過熱警告 (80°C)", color: cloudwatch.Color.RED },
+          { value: 40, label: "過熱警告 (40°C)", color: cloudwatch.Color.RED },
         ],
       }),
     );
