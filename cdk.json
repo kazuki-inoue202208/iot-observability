@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/iot_observability.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/app.ts",
   "watch": {
     "include": [
       "**"
@@ -102,6 +102,22 @@
     "@aws-cdk/core:validateSnapshotRemovalPolicy": true,
     "@aws-cdk/custom-resources:logApiResponseDataPropertyTrueDefault": false,
     "@aws-cdk/customresources:installLatestAwsSdkDefault": false,
-    "@aws-cdk/s3-notifications:addS3TrustKeyPolicyForSnsSubscriptions": true
+    "@aws-cdk/s3-notifications:addS3TrustKeyPolicyForSnsSubscriptions": true,
+    "stage": "dev",
+    "dev": {
+      "stage": "dev",
+      "slackWorkspaceId": "",
+      "slackChannelId": ""
+    },
+    "stg": {
+      "stage": "stg",
+      "slackWorkspaceId": "",
+      "slackChannelId": ""
+    },
+    "prod": {
+      "stage": "prd",
+      "slackWorkspaceId": "",
+      "slackChannelId": ""
+    }
   }
 }

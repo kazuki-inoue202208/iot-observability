@@ -1,0 +1,50 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "unused-imports"],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_$",
+        "varsIgnorePattern": "^_$",
+        "caughtErrorsIgnorePattern": "^_$",
+        "destructuredArrayIgnorePattern": "^_$"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/infra/entity/**/*.ts"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["@/infra/entity/**"],
+                "message": "@/infra/entity 配下を import する際は相対パスを使用してください（TypeORM migration 対策）"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

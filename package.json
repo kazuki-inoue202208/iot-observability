@@ -5,19 +5,36 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "lint": "eslint 'src/**/*.ts' 'lib/**/*.ts' 'bin/**/*.ts'",
+    "lint:fix": "eslint --fix 'src/**/*.ts' 'lib/**/*.ts' 'bin/**/*.ts'"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/jest": "^30",
-    "@types/node": "^24.10.1",
-    "jest": "^30",
-    "ts-jest": "^29",
+    "@types/node": "^24.12.4",
+    "@typescript-eslint/eslint-plugin": "^8.60.1",
+    "@typescript-eslint/parser": "^8.60.1",
     "aws-cdk": "2.1125.0",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "globals": "^17.6.0",
+    "jest": "^30",
+    "prettier": "^3.8.3",
+    "ts-jest": "^29",
     "ts-node": "^10.9.2",
     "typescript": "~5.9.3"
   },
   "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.1057.0",
+    "@aws-sdk/client-iot": "^3.1068.0",
+    "@aws-sdk/client-ssm": "^3.1070.0",
+    "@types/aws-greengrass-core-sdk": "^1.6.5",
     "aws-cdk-lib": "^2.257.0",
-    "constructs": "^10.5.0"
+    "aws-greengrass-core-sdk": "^1.7.0",
+    "constructs": "^10.5.0",
+    "dotenv": "^17.4.2"
   }
 }
