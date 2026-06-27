@@ -7,7 +7,6 @@ import { IoTMetrics } from "./iot-metrics-construct";
 
 export interface IoTAlarmsConstructProps {
   stage: string;
-  metricsTopic?: sns.Topic;
   alarmTopic?: sns.Topic;
   /** IoTMetricsConstruct で定義した共有メトリクスオブジェクト */
   metrics: IoTMetrics;
