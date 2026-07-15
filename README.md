@@ -177,4 +177,4 @@ npx cdk synth     # CloudFormation テンプレートの生成（デプロイな
 | ファイル | 内容 |
 |---------|------|
 | [docs/mqtt-messages.md](docs/mqtt-messages.md) | MQTT トピック・ペイロード仕様 |
-| [docs/sa_drawio.png](docs/sa_drawio.png) | アーキテクチャ図 |
+| [docs/sa_drawio.png](docs/system_drawio.png) | アーキテクチャ図 |
